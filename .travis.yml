@@ -1,12 +1,23 @@
+dist: trusty
+sudo: false
+
 language: node_js
 node_js:
-  - 0.8
-// ...snip...
-'devDependencies': {
-  'karma': '~0.13'
-},
-// ...snip...
-'scripts': {
-   'test': './node_modules/.bin/karma start --single-run --browsers Chrome'
-}  
-  
+  - '8'
+
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
+
+cache:
+  directories:
+    - ./node_modules
+
+install:
+  - npm install
+
+script:
+  - npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
