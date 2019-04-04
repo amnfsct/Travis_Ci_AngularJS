@@ -70,6 +70,8 @@ module.exports = function(config) {
       }
     },
 
+    plugins:  ['karma-chrome-launcher', 'puppeteer'],
+
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
