@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - 0.8
+// ...snip...
+'devDependencies': {
+  'karma': '~0.13'
+},
+// ...snip...
+'scripts': {
+   'test': './node_modules/.bin/karma start --single-run --browsers Chrome'
+}  
+  
