@@ -62,6 +62,7 @@ module.exports = function(config) {
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: ['ChromeHeadlessNoSandbox'],
 
+    plugins:  ['karma-jasmine', 'karma-chrome-launcher'],
     // you can define custom flags
     customLaunchers: {
       ChromeHeadlessNoSandbox: {
@@ -69,9 +70,6 @@ module.exports = function(config) {
         flags: ['--no-sandbox']
       }
     },
-
-    plugins:  ['karma-chrome-launcher', 'puppeteer'],
-
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
